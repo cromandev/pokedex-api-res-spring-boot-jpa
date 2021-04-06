@@ -6,7 +6,7 @@ services:
     container_name: pokedex-mysql
     restart: always
     ports:
-      - 3396:3396
+      - 3306:3396
     environment:
       - MYSQL_ROOT_PASSWORD=example
       - MYSQL_DATABASE=test
@@ -24,7 +24,7 @@ services:
     depends_on:
       - pokedex-mysql
     ports:
-      - 8089:8089
+      - 8080:8089
     environment:
       #- "SPRING_PROFILES_ACTIVE=default"
       #- SPRING_DATASOURCE_URL=jdbc:mysql://pokedex-mysql:3306/test
